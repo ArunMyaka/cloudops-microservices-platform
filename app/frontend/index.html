@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudOps Tasks</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <div class="topbar">
+          <div>
+            <p class="eyebrow">DevOps Portfolio App</p>
+            <h1>CloudOps Tasks</h1>
+          </div>
+          <a class="status" href="/api/health" target="_blank">API Health</a>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input id="task-title" type="text" maxlength="160" placeholder="Add a deployment task" required />
+          <button type="submit">Add</button>
+        </form>
+
+        <ul id="tasks" class="tasks"></ul>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
+

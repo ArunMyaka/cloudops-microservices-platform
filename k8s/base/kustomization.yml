@@ -1,0 +1,7 @@
+resources:
+  - namespace.yml
+  - postgres.yml
+  - backend.yml
+  - frontend.yml
+  - ingress.yml
+

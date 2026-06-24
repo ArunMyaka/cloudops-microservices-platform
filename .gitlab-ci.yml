@@ -1,0 +1,21 @@
+stages:
+  - test
+  - build
+
+backend-test:
+  image: python:3.12-slim
+  stage: test
+  script:
+    - cd app/backend
+    - pip install -r requirements.txt
+    - pytest
+
+docker-build:
+  image: docker:27
+  services:
+    - docker:27-dind
+  stage: build
+  script:
+    - docker build -t cloudops-backend:$CI_COMMIT_SHORT_SHA app/backend
+    - docker build -t cloudops-frontend:$CI_COMMIT_SHORT_SHA app/frontend
+
