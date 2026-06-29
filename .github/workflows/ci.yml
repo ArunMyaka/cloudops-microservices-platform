@@ -45,10 +45,9 @@ jobs:
         with:
           context: app/backend
           push: true
-          tags: ghcr.io/${{ github.repository }}/backend:latest
-
+          tags: ghcr.io/arunmyaka/cloudops-microservices-platform/backend:latest
       - uses: docker/build-push-action@v6
         with:
           context: app/frontend
           push: true
-          tags: ghcr.io/${{ github.repository }}/frontend:latest
+          tags: ghcr.io/arunmyaka/cloudops-microservices-platform/frontend:latest
